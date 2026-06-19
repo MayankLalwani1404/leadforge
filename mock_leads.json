@@ -1,0 +1,527 @@
+[
+  {
+    "company_name": "Razorpay",
+    "website": "https://razorpay.com",
+    "industry": "Fintech",
+    "employee_count": 3200,
+    "funding_stage": "Series C",
+    "location": "Bengaluru, India",
+    "recent_news": [
+      "Razorpay launches payment gateway optimized for B2B transactions with instant reconciliation.",
+      "Razorpay expands international presence by strengthening cross-border checkout operations."
+    ],
+    "job_postings_count": 45,
+    "top_hiring_roles": ["Senior Director of Product (B2B)", "Lead Engineer - Settlement Platform"],
+    "tech_stack": ["React", "Python", "AWS"],
+    "inferred_pain_points": [
+      "Complex reconciliation for multi-currency transactions.",
+      "High drop-off rates on legacy enterprise checkout screens."
+    ],
+    "fit_score": 88,
+    "score_breakdown": {
+      "size_fit": 22,
+      "tech_match": 24,
+      "hiring_velocity": 21,
+      "pain_keyword_match": 21
+    },
+    "fit_level": "High",
+    "score_reasoning": "Razorpay is a strong fit due to their large scale (3200 employees) and active hiring for senior B2B product roles. Their recent launch of a B2B payment gateway aligns perfectly with our enterprise optimization modules. Additionally, their React and Python tech stack matches our integration connectors.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI noticed Razorpay recently launched your new payment gateway optimized for B2B transactions with instant reconciliation. Congrats on the milestone! Scaling B2B payment flows often introduces complex settlement flows and developer friction. At LeadForge, we help fintech teams automate B2B customer onboarding workflows, saving hours of manual setup. Given your current expansion of cross-border checkouts, I wanted to see if you are open to exploring how we can streamline developer integration times by 40%? Let me know if you have 10 minutes next week.",
+      "touch_2": "Hi there,\n\nFollowing up on my last email. Leading fintech giants like Stripe and Adyen have used our automation engine to cut checkout drop-offs and automate merchant verification. With Razorpay currently hiring a Lead Engineer for Settlement Platforms, our ready-made connector modules can save your engineering team months of build time. Our platform acts as a bridge, reducing database overhead while keeping merchant data highly secure and compliant. I'd love to share a short 3-minute video showing our integration in action. Would Wednesday at 3 PM IST work for a brief call?",
+      "touch_3": "Hi there, since I haven't heard back, I assume optimizing merchant onboarding isn't a priority for Razorpay right now. If things change or you face developer bottlenecks, feel free to reach out. I will stop my outreach here. Wish you the best!"
+    },
+    "status": "Scored"
+  },
+  {
+    "company_name": "Zepto",
+    "website": "https://www.zeptonow.com",
+    "industry": "B2B SaaS",
+    "employee_count": 1800,
+    "funding_stage": "Series C",
+    "location": "Mumbai, India",
+    "recent_news": [
+      "Zepto expands membership program pass to cover 80% of active urban users.",
+      "Zepto flags supply chain inefficiencies in secondary tier warehousing hubs."
+    ],
+    "job_postings_count": 85,
+    "top_hiring_roles": ["VP of Procurement Automation", "Backend Developer (Go)"],
+    "tech_stack": ["Go", "Node.js", "Kubernetes"],
+    "inferred_pain_points": [
+      "Warehouse-to-hub transit delays and high logistics management costs.",
+      "Manual procurement tracking slows vendor onboarding."
+    ],
+    "fit_score": 78,
+    "score_breakdown": {
+      "size_fit": 20,
+      "tech_match": 18,
+      "hiring_velocity": 24,
+      "pain_keyword_match": 16
+    },
+    "fit_level": "High",
+    "score_reasoning": "Zepto shows a high fit score of 78 driven by strong hiring velocity (85 active postings) and recruitment of procurement automation leaders. Their logistics focus matches our supply-chain intelligence signals, although their dev stack has slight integration differences.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw the news about Zepto expanding its membership program pass to cover 80% of active urban users. Incredible growth! With fast expansion, warehousing and backend supply chain bottlenecks can quickly impact delivery promises. LeadForge helps high-growth consumer apps automate partner and procurement communications to eliminate manual delays. Given your current expansion, I wanted to see if you're exploring ways to automate supplier updates directly from your Go and Kubernetes infrastructure? Let me know if you'd be open to a quick chat next week.",
+      "touch_2": "Hi there,\n\nI know you're busy scaling operations across hubs. High-growth logistics platforms use LeadForge to sync delivery partner metadata automatically. By automating the communication loop between procurement teams and suppliers, we've helped companies reduce hub turnaround times by up to 25%. With Zepto currently searching for a VP of Procurement Automation, our platform could be the exact shortcut your new VP needs to drive efficiency. Would you be open to a 10-minute demo to see how we automate these partner workflows?",
+      "touch_3": "Hi there, since I haven't heard back, I'll assume procurement automation is already handled. I won't crowd your inbox. If transit latency or partner onboarding becomes a bottleneck down the road, please feel free to drop a line. Best of luck!"
+    },
+    "status": "Draft Ready"
+  },
+  {
+    "company_name": "BrowserStack",
+    "website": "https://browserstack.com",
+    "industry": "DevTools",
+    "employee_count": 1200,
+    "funding_stage": "Public",
+    "location": "Mumbai, India",
+    "recent_news": [
+      "BrowserStack launches automated visual regression testing platform for mobile apps.",
+      "BrowserStack acquires tooling startup to expand test observability suite."
+    ],
+    "job_postings_count": 30,
+    "top_hiring_roles": ["DevOps Architect", "Enterprise Account Executive"],
+    "tech_stack": ["Ruby on Rails", "React", "Docker"],
+    "inferred_pain_points": [
+      "Long build queue times for visual regression test jobs.",
+      "High cost of infrastructure maintenance for mobile emulation."
+    ],
+    "fit_score": 82,
+    "score_breakdown": {
+      "size_fit": 21,
+      "tech_match": 22,
+      "hiring_velocity": 19,
+      "pain_keyword_match": 20
+    },
+    "fit_level": "High",
+    "score_reasoning": "BrowserStack is scored at 82 due to their Public company scale and active hiring for Enterprise Account Executives. Their focus on visual regression testing aligns with our QA automation intelligence tracks, and their RoR/React tech stack is fully supported.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw that BrowserStack recently launched an automated visual regression testing platform for mobile apps. Expanding visual testing infrastructure is critical as responsive layouts grow more complex. At LeadForge, we specialize in helping DevTools enterprises automate outbound data research on target accounts that use outdated testing tools. I wanted to see if your Enterprise Account Executives are looking for a more automated way to target accounts running legacy mobile emulation suites?",
+      "touch_2": "Hi there,\n\nFollowing up on my last email. Leading sales and growth teams in the DevTools space use LeadForge to automatically scrape, score, and qualify accounts that exhibit engineering pain points. Since BrowserStack is looking for a DevOps Architect and Enterprise Account Executives, our data automation can feed your sales pipeline with accounts facing high build queue times and mobile emulation issues. We can integrate directly with your Salesforce and React-based applications. Would you be open to a brief call next Thursday?",
+      "touch_3": "Hi there, I understand you're busy. I'll take your silence as a sign that your outbound sales prospecting is working perfectly. If you ever need to target high-intent engineering leads with exact stack signals, feel free to reach out. Have a great week!"
+    },
+    "status": "Scored"
+  },
+  {
+    "company_name": "Postman",
+    "website": "https://postman.com",
+    "industry": "DevTools",
+    "employee_count": 650,
+    "funding_stage": "Series C",
+    "location": "San Francisco, USA",
+    "recent_news": [
+      "Postman introduces collaborative API builder with real-time editing features.",
+      "Postman reaches 30 million developers on its API platform globally."
+    ],
+    "job_postings_count": 22,
+    "top_hiring_roles": ["Technical Writer", "Developer Advocate (API Governance)"],
+    "tech_stack": ["Node.js", "React", "AWS"],
+    "inferred_pain_points": [
+      "Difficulty driving enterprise-wide adoption of API design guidelines.",
+      "Customer friction during migration from legacy REST endpoints to GraphQL."
+    ],
+    "fit_score": 75,
+    "score_breakdown": {
+      "size_fit": 18,
+      "tech_match": 22,
+      "hiring_velocity": 17,
+      "pain_keyword_match": 18
+    },
+    "fit_level": "High",
+    "score_reasoning": "Postman qualifies as a High-fit target (75) because of their strong DevTools alignment, large user base, and specific hiring focus on API Governance. Their Node.js and AWS infrastructure matches our technical profile perfectly.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nCongratulations on reaching 30 million developers globally! I saw you also recently introduced a collaborative API builder. Managing API design guidelines at that scale must present major governance challenges. LeadForge assists DevTools leaders in identifying enterprise targets struggling with API versioning and REST-to-GraphQL migrations. Would you be open to seeing how our platform scans public repositories to qualify high-intent accounts for your enterprise reps?",
+      "touch_2": "Hi there,\n\nI know driving enterprise adoption is top of mind. Platforms like Postman use LeadForge to monitor engineering vacancies and tech stack shifts across mid-market accounts. This allows Dev Advocates and Enterprise reps to reach out exactly when a target is refactoring their API layers. With Postman looking for a Developer Advocate in API Governance, our platform could serve as a valuable intelligence source. Can we schedule a brief 10-minute chat this Wednesday?",
+      "touch_3": "Hi there, since I haven't heard back, I'll step away. If you ever want to explore repository-level signal tracking for your enterprise sales team, you know where to find me. Thanks!"
+    },
+    "status": "Draft Ready"
+  },
+  {
+    "company_name": "Chargebee",
+    "website": "https://chargebee.com",
+    "industry": "B2B SaaS",
+    "employee_count": 1400,
+    "funding_stage": "Series C",
+    "location": "San Francisco, USA",
+    "recent_news": [
+      "Chargebee rolls out AI-driven subscription analytics for SaaS expansion tracking.",
+      "Chargebee partners with regional payment networks to streamline EU checkout compliance."
+    ],
+    "job_postings_count": 15,
+    "top_hiring_roles": ["Sales Operations Manager", "Revenue Accountant"],
+    "tech_stack": ["Java", "Angular", "PostgreSQL"],
+    "inferred_pain_points": [
+      "Revenue leakage due to complex multi-currency subscription tiers.",
+      "High development overhead maintaining compliance across localized EU taxes."
+    ],
+    "fit_score": 79,
+    "score_breakdown": {
+      "size_fit": 22,
+      "tech_match": 17,
+      "hiring_velocity": 18,
+      "pain_keyword_match": 22
+    },
+    "fit_level": "High",
+    "score_reasoning": "Chargebee sits at a 79 score based on their scale (1400 employees) and strong alignment with our B2B SaaS target profile. The need to optimize EU compliance checkout pathways is a strong pain point matched by our system rules.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw that Chargebee recently rolled out AI-driven subscription analytics to track SaaS expansion. Tracking subscription metrics and billing compliance internationally is a massive pain point. LeadForge helps B2B SaaS platforms identify companies that show signals of revenue leakage or complex billing migrations. I wanted to see if your Sales Operations team is currently looking for automated ways to detect targets experiencing invoice friction?",
+      "touch_2": "Hi there,\n\nJust following up on my previous note. Since Chargebee is currently hiring a Revenue Accountant and Sales Operations Manager, it sounds like streamlining billing operations is a key focus. Our platform helps billing leaders automate account intelligence gathering, matching customer tech stacks like Java and Angular with revenue leakage patterns. We could help your sales reps identify high-value accounts that need advanced checkout compliance. Do you have time for a brief 10-minute demo on Tuesday?",
+      "touch_3": "Hi there, since I haven't heard back, I will assume you're all set. If you ever need to automate B2B SaaS prospecting based on revenue leakage signals, feel free to connect. Cheers!"
+    },
+    "status": "Scored"
+  },
+  {
+    "company_name": "Freshworks",
+    "website": "https://freshworks.com",
+    "industry": "B2B SaaS",
+    "employee_count": 4800,
+    "funding_stage": "Public",
+    "location": "San Mateo, USA",
+    "recent_news": [
+      "Freshworks announces next-gen AI service assistant 'Freddy' for IT support teams.",
+      "Freshworks reports strong double-digit growth in mid-market CRM subscriptions."
+    ],
+    "job_postings_count": 8,
+    "top_hiring_roles": ["Customer Success Specialist", "Product Manager (ITSM)"],
+    "tech_stack": ["Ruby on Rails", "Ember.js", "AWS"],
+    "inferred_pain_points": [
+      "User complaints regarding slow ticket load times in Freddy AI chat overlays.",
+      "Customer churn due to complex setups in multi-department IT workflows."
+    ],
+    "fit_score": 68,
+    "score_breakdown": {
+      "size_fit": 24,
+      "tech_match": 16,
+      "hiring_velocity": 10,
+      "pain_keyword_match": 18
+    },
+    "fit_level": "Medium",
+    "score_reasoning": "Freshworks scored 68 due to its Public scale, offset by lower current hiring velocity (only 8 active job postings). Their focus on IT support ticket automation offers moderate alignment with our service desk integration plays.",
+    "red_flags": ["Hiring freeze warning: very low open job roles relative to company scale."],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI read about the launch of your next-gen AI service assistant, Freddy. It's exciting to see conversational AI transform IT service desks. However, scaling dynamic chatbots often leads to page load delays and chat overlay drop-offs. LeadForge helps enterprise software companies monitor customer feedback loops and automate alerts for performance dips. I'm curious if your ITSM product teams are looking into performance issues on legacy Webpack/Ember structures?",
+      "touch_2": "Hi there,\n\nFollowing up on my last email. Freshworks has seen excellent mid-market CRM growth, but maintaining retention means ensuring that customer setups remain frictionless. With your current search for a Customer Success Specialist, scaling manual onboarding is likely a major challenge. LeadForge can automate account setup monitoring and highlight churn risks. Would you be open to a quick call to see how we help customer success teams automate account risk scoring?",
+      "touch_3": "Hi there, since I haven't heard back, I'll stop reaching out. If you ever need to automate retention alerts for your CRM customers, feel free to contact us. Best regards!"
+    },
+    "status": "Scored"
+  },
+  {
+    "company_name": "Druva",
+    "website": "https://druva.com",
+    "industry": "Data Infrastructure",
+    "employee_count": 1100,
+    "funding_stage": "Series C",
+    "location": "Sunnyvale, USA",
+    "recent_news": [
+      "Druva introduces ransomware recovery warranty for enterprise cloud backups.",
+      "Druva expands SaaS data protection capabilities to cover Microsoft 365 environments."
+    ],
+    "job_postings_count": 18,
+    "top_hiring_roles": ["Solutions Architect (Cybersecurity)", "Cloud Engineer (AWS)"],
+    "tech_stack": ["Python", "React", "AWS DynamoDB"],
+    "inferred_pain_points": [
+      "High storage costs associated with continuous deduplication workflows.",
+      "Slow data recovery speeds for large scale enterprise database restores."
+    ],
+    "fit_score": 72,
+    "score_breakdown": {
+      "size_fit": 21,
+      "tech_match": 18,
+      "hiring_velocity": 16,
+      "pain_keyword_match": 17
+    },
+    "fit_level": "High",
+    "score_reasoning": "Druva has a solid score of 72 because of its data protection focus and strong AWS stack alignment. Hiring for cybersecurity solutions architects indicates active outbound enterprise selling requirements, representing a strong ICP fit.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI read that Druva recently introduced a ransomware recovery warranty for enterprise cloud backups. Offering that level of security guarantee is a major differentiator! However, database restores and deduplication scaling can lead to database performance bottlenecks. LeadForge helps cloud data platforms monitor client storage trends and proactively alert account teams before restore speeds degrade. I wanted to see if your Solutions Architects are looking at automation here?",
+      "touch_2": "Hi there,\n\nI'm following up on my previous note. Druva's expansion of SaaS data protection for Microsoft 365 requires robust backend automation. With your team seeking a Cloud Engineer (AWS), building custom backup monitors can take up valuable developer resources. LeadForge provides plug-and-play monitoring scripts that hook into AWS DynamoDB. Would you be open to a 10-minute demo to see how we've helped other data platforms reduce cloud monitoring costs?",
+      "touch_3": "Hi there, since I haven't heard from you, I'll close this thread. If you ever need to automate data recovery monitors or cut storage analysis overhead, feel free to get in touch. Have a great day!"
+    },
+    "status": "Draft Ready"
+  },
+  {
+    "company_name": "Mindtickle",
+    "website": "https://mindtickle.com",
+    "industry": "Sales Intelligence",
+    "employee_count": 750,
+    "funding_stage": "Series C",
+    "location": "Pune, India",
+    "recent_news": [
+      "Mindtickle launches generative AI-powered sales coaching assistant.",
+      "Mindtickle acquires competitor to double down on conversational intelligence."
+    ],
+    "job_postings_count": 12,
+    "top_hiring_roles": ["Enterprise Account Executive", "Sales Enablement Director"],
+    "tech_stack": ["React", "Node.js", "MongoDB"],
+    "inferred_pain_points": [
+      "Low adoption rates for remote sales training modules.",
+      "Difficulty extracting structured coaching insights from unindexed audio calls."
+    ],
+    "fit_score": 85,
+    "score_breakdown": {
+      "size_fit": 19,
+      "tech_match": 22,
+      "hiring_velocity": 19,
+      "pain_keyword_match": 25
+    },
+    "fit_level": "High",
+    "score_reasoning": "Mindtickle scores 85, displaying exceptional pain-keyword matching and industry relevance. As a sales enablement platform, their core business aligns with our prospecting automation technology, and their tech stack is fully supported.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw that Mindtickle recently launched a generative AI-powered sales coaching assistant. Bringing AI directly to sales readiness is a huge step forward. Extracting coaching insights from unindexed audio calls remains a core engineering challenge. At LeadForge, we provide audio-to-text pipeline automation that structures voice metadata for sales training. I'd love to know if your product team is seeking ways to improve audio transcription accuracy?",
+      "touch_2": "Hi there,\n\nJust following up. Since Mindtickle is hiring for an Enterprise Account Executive and a Sales Enablement Director, you're clearly focused on expanding your enterprise footprint. Our data automation can enrich your target accounts with data points on which companies have low CRM adoption or sales coaching gaps. This gives your reps the exact talking points they need. Would you be open to a brief call next Thursday at 2 PM IST?",
+      "touch_3": "Hi there, since I haven't heard back, I'll sign off. If you ever need to automate pipeline intelligence for your enterprise reps, you can reach me here. Best of luck!"
+    },
+    "status": "Exported"
+  },
+  {
+    "company_name": "Slintel",
+    "website": "https://slintel.com",
+    "industry": "Sales Intelligence",
+    "employee_count": 120,
+    "funding_stage": "Series A",
+    "location": "Mountain View, USA",
+    "recent_news": [
+      "Slintel enhances buying intent engine to track software renewal timelines.",
+      "Slintel integrates with top CRMs to automate target list generation."
+    ],
+    "job_postings_count": 4,
+    "top_hiring_roles": ["Data Engineer", "Frontend Developer"],
+    "tech_stack": ["Python", "React", "PostgreSQL"],
+    "inferred_pain_points": [
+      "High rates of stale technographic profiles due to slow scraping cycles.",
+      "API request throttling limits from public data sources."
+    ],
+    "fit_score": 64,
+    "score_breakdown": {
+      "size_fit": 12,
+      "tech_match": 22,
+      "hiring_velocity": 10,
+      "pain_keyword_match": 20
+    },
+    "fit_level": "Medium",
+    "score_reasoning": "Slintel has a fit score of 64. While their domain (buying intent data) and Python/React stack align very well, their smaller team size (120) and slow hiring velocity (4 postings) restrict their prioritization score.",
+    "red_flags": ["Low hiring velocity: limited budget expansion signals."],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw that Slintel recently enhanced its buying intent engine to track software renewal timelines. Providing accurate intent signals is critical. However, keeping technographic profiles fresh is difficult when public data sources throttle scraping scripts. At LeadForge, we build resilient, distributed data scrapers that bypass rate limits. I wanted to see if your Data Engineers are looking for ways to reduce API throttling errors?",
+      "touch_2": "Hi there,\n\nI'm following up on my previous email. Since Slintel is currently looking for a Data Engineer, finding ways to scale your data collection pipeline is likely top-of-mind. LeadForge offers a managed scraping API that returns clean technographic data without the infra maintenance headache. We could easily feed this into your PostgreSQL database. Would you be open to a quick 10-minute chat to see how it works?",
+      "touch_3": "Hi there, since I haven't heard back, I'll stop reaching out. If you ever need to scale your technographic data collection pipelines, feel free to reach out. Thanks!"
+    },
+    "status": "Scored"
+  },
+  {
+    "company_name": "Uniphore",
+    "website": "https://uniphore.com",
+    "industry": "B2B SaaS",
+    "employee_count": 950,
+    "funding_stage": "Series C",
+    "location": "Chennai, India",
+    "recent_news": [
+      "Uniphore unveils real-time emotional analysis engine for customer support reps.",
+      "Uniphore lands major enterprise contracts in telecommunications sector."
+    ],
+    "job_postings_count": 14,
+    "top_hiring_roles": ["NLP Researcher", "Customer Success Engineer"],
+    "tech_stack": ["Python", "TensorFlow", "Node.js"],
+    "inferred_pain_points": [
+      "High latency in real-time sentiment analysis models.",
+      "Integration friction with legacy customer support telephony setups."
+    ],
+    "fit_score": 76,
+    "score_breakdown": {
+      "size_fit": 20,
+      "tech_match": 19,
+      "hiring_velocity": 17,
+      "pain_keyword_match": 20
+    },
+    "fit_level": "High",
+    "score_reasoning": "Uniphore is scored at 76, showing a high match with B2B SaaS criteria and significant customer service intelligence requirements. Their hiring of NLP researchers indicates heavy R&D in conversational analytics.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI noticed Uniphore recently unveiled a real-time emotional analysis engine for support agents. Capturing emotion in real-time is a massive technical feat! However, processing audio streams dynamically can introduce latency issues. LeadForge helps NLP teams optimize ingestion pipelines to reduce processing latency by up to 35%. I wanted to see if your researchers are looking for ways to streamline TensorFlow pipeline performance?",
+      "touch_2": "Hi there,\n\nFollowing up on my last note. With Uniphore winning major contracts in telecommunications, onboarding enterprise customers onto your real-time analytics engine is likely a priority. Since you're hiring a Customer Success Engineer, automating the setup and connection of client telephony systems could save your team weeks of manual work. LeadForge's connector framework makes this integration seamless. Can we schedule a brief call next Tuesday?",
+      "touch_3": "Hi there, since I haven't heard back, I'll stop emailing. If you ever need to reduce model latency or automate customer telephony integrations, feel free to reach out. Best!"
+    },
+    "status": "Draft Ready"
+  },
+  {
+    "company_name": "Hasura",
+    "website": "https://hasura.io",
+    "industry": "DevTools",
+    "employee_count": 180,
+    "funding_stage": "Series B",
+    "location": "Bengaluru, India",
+    "recent_news": [
+      "Hasura adds instant GraphQL API support for Snowflake and BigQuery data sources.",
+      "Hasura security audit certifies enterprise platform for HIPAA compliance."
+    ],
+    "job_postings_count": 6,
+    "top_hiring_roles": ["Developer Advocate", "Backend Engineer (Haskell)"],
+    "tech_stack": ["Haskell", "React", "GraphQL"],
+    "inferred_pain_points": [
+      "Complex authorization rules on deep nested GraphQL queries.",
+      "Performance degradation when querying large data warehouses like Snowflake."
+    ],
+    "fit_score": 71,
+    "score_breakdown": {
+      "size_fit": 15,
+      "tech_match": 22,
+      "hiring_velocity": 14,
+      "pain_keyword_match": 20
+    },
+    "fit_level": "High",
+    "score_reasoning": "Hasura has a fit score of 71, reflecting their solid Series B status and high DevTools alignment. Their recent support for Snowflake/BigQuery data sources makes them a prime candidate for our data-connectivity intelligence offerings.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw that Hasura added instant GraphQL API support for Snowflake and BigQuery. That's a huge step for teams looking to access analytical databases in real-time! However, querying large warehouses often results in slow response times. At LeadForge, we build caching layers that optimize nested GraphQL queries. I wanted to see if your Backend Engineers are looking at ways to speed up Snowflake data loads?",
+      "touch_2": "Hi there,\n\nJust following up on my previous message. Since Hasura is currently hiring a Developer Advocate and Haskell Engineer, fostering developer trust and keeping performance high is key. LeadForge's caching engine acts as an automated layer that speeds up complex query resolution. We'd love to share a short case study on how we cut query latency for developer-focused platforms. Would you be free for a 10-minute chat this Thursday?",
+      "touch_3": "Hi there, since I haven't heard back, I'll close this thread. If query performance on data warehouses becomes a blocker, please feel free to drop a line. Best of luck!"
+    },
+    "status": "Scored"
+  },
+  {
+    "company_name": "Airbyte",
+    "website": "https://airbyte.com",
+    "industry": "Data Infrastructure",
+    "employee_count": 220,
+    "funding_stage": "Series B",
+    "location": "San Francisco, USA",
+    "recent_news": [
+      "Airbyte launches custom connector builder marketplace with AI assistance.",
+      "Airbyte reports 5x growth in sync volume for enterprise database replicas."
+    ],
+    "job_postings_count": 10,
+    "top_hiring_roles": ["Integration Engineer", "Technical Support Engineer"],
+    "tech_stack": ["Java", "Python", "Kubernetes"],
+    "inferred_pain_points": [
+      "Frequent connector failure due to schema changes in upstream APIs.",
+      "Memory leak issues in high-volume database synchronization jobs."
+    ],
+    "fit_score": 83,
+    "score_breakdown": {
+      "size_fit": 18,
+      "tech_match": 23,
+      "hiring_velocity": 20,
+      "pain_keyword_match": 22
+    },
+    "fit_level": "High",
+    "score_reasoning": "Airbyte scores an impressive 83. Their core business (data replication) matches our data infrastructure track perfectly. Their active hiring for Integration Engineers indicates a high need for connector building and maintenance automation.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw Airbyte launched an AI-assisted custom connector builder. This is a game-changer for data engineering teams! However, keeping upstream API integrations from breaking when schemas change is a constant battle. At LeadForge, we build automated schema detection monitors that catch upstream changes before they break sync pipelines. I wanted to see if your integration engineers are exploring automated schema testing?",
+      "touch_2": "Hi there,\n\nFollowing up on my last note. With Airbyte seeing a 5x growth in enterprise sync volume, optimizing memory usage on database replicas is crucial. Since you are hiring an Integration Engineer, outsourcing schema drift detection can free your developers to focus on core performance. LeadForge easily fits into Kubernetes environments to track API drifts. Would you be open to a 10-minute demo to see it in action next week?",
+      "touch_3": "Hi there, I understand you're busy. I'll pause my outreach here. If connector failures or schema drift issues become a bottleneck, feel free to reach out. Have a wonderful week!"
+    },
+    "status": "Exported"
+  },
+  {
+    "company_name": "Census",
+    "website": "https://www.getcensus.com",
+    "industry": "Data Infrastructure",
+    "employee_count": 140,
+    "funding_stage": "Series A",
+    "location": "San Francisco, USA",
+    "recent_news": [
+      "Census announces native reverse ETL sync engine for HubSpot custom objects.",
+      "Census partners with Snowflake to offer warehouse-native activation services."
+    ],
+    "job_postings_count": 3,
+    "top_hiring_roles": ["Data Integration Engineer", "Account Executive"],
+    "tech_stack": ["Ruby on Rails", "React", "PostgreSQL"],
+    "inferred_pain_points": [
+      "Long sync latency when push updates are sent to third-party CRM endpoints.",
+      "High API consumption charges from Salesforce and HubSpot integrations."
+    ],
+    "fit_score": 69,
+    "score_breakdown": {
+      "size_fit": 14,
+      "tech_match": 20,
+      "hiring_velocity": 15,
+      "pain_keyword_match": 20
+    },
+    "fit_level": "Medium",
+    "score_reasoning": "Census is scored at 69, reflecting Series A scale and niche positioning in the Reverse ETL space. Their Ruby on Rails and React tech stack fits our core system profiles, but low job postings limit score growth.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI read about Census announcing native reverse ETL sync for HubSpot custom objects. Great feature release! However, pushing real-time warehouse data to external CRM APIs often incurs heavy API consumption charges and rate limits. LeadForge helps data teams cache and batch CRM updates to reduce API costs by up to 50%. I wanted to see if your Integration Engineers are looking for ways to optimize HubSpot API calls?",
+      "touch_2": "Hi there,\n\nI'm following up on my previous note. With Census partnering with Snowflake for warehouse-native activation, your sync volume is bound to grow. Since you are hiring a Data Integration Engineer, our platform can help them automate API error logging and throttle calls dynamically. This ensures CRM updates stay fast without blowing past rate limits. Would you be free for a 10-minute call this Wednesday?",
+      "touch_3": "Hi there, since I haven't heard back, I will stop my outreach. If CRM API throttling or high HubSpot/Salesforce integration costs ever become a major concern, feel free to reach out. Best of luck!"
+    },
+    "status": "Scored"
+  },
+  {
+    "company_name": "Hightouch",
+    "website": "https://hightouch.com",
+    "industry": "Data Infrastructure",
+    "employee_count": 160,
+    "funding_stage": "Series B",
+    "location": "San Francisco, USA",
+    "recent_news": [
+      "Hightouch launches warehouse-native customer data platform (CDP).",
+      "Hightouch enables identity resolution tools to sync customer profiles."
+    ],
+    "job_postings_count": 8,
+    "top_hiring_roles": ["Backend Engineer (Golang)", "Sales Engineer"],
+    "tech_stack": ["Go", "React", "Snowflake"],
+    "inferred_pain_points": [
+      "High cloud infrastructure compute cost during complex identity resolution runs.",
+      "Slow data syncs to marketing platforms due to downstream rate limits."
+    ],
+    "fit_score": 77,
+    "score_breakdown": {
+      "size_fit": 16,
+      "tech_match": 22,
+      "hiring_velocity": 17,
+      "pain_keyword_match": 22
+    },
+    "fit_level": "High",
+    "score_reasoning": "Hightouch scores 77 due to active series B expansion and strong DevTools/Data Infrastructure alignment. Their focus on identity resolution indicates high computing demand, matching our performance optimization toolsets.",
+    "red_flags": [],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw that Hightouch launched a warehouse-native Customer Data Platform (CDP) with identity resolution. Building profile syncs directly on the warehouse is definitely the future! However, running identity resolution queries can drive up Snowflake compute costs dramatically. LeadForge helps platforms optimize SQL execution paths to lower warehouse expenses. I wanted to see if your Go backend team is exploring cost-reduction tools?",
+      "touch_2": "Hi there,\n\nFollowing up on my last note. Hightouch's focus on syncing profiles to marketing platforms requires handling strict downstream rate limits. With your current search for a Backend Engineer (Golang) and a Sales Engineer, automating the ingestion pipelines could free up your engineering team. LeadForge integrates with Snowflake and Go environments to throttle outgoing API calls. Do you have 10 minutes for a brief call next Thursday?",
+      "touch_3": "Hi there, since I haven't heard back, I will pause my emails. If you ever need to optimize warehouse compute costs or handle marketing API rate limits, please feel free to reach out. Best of luck!"
+    },
+    "status": "Scored"
+  },
+  {
+    "company_name": "Segment",
+    "website": "https://segment.com",
+    "industry": "Data Infrastructure",
+    "employee_count": 1400,
+    "funding_stage": "Public",
+    "location": "San Francisco, USA",
+    "recent_news": [
+      "Segment integrates with top-tier AI models for real-time customer personalization.",
+      "Segment parent company announces restructuring of business communication unit."
+    ],
+    "job_postings_count": 5,
+    "top_hiring_roles": ["Security Compliance Specialist", "Senior Product Manager"],
+    "tech_stack": ["Go", "React", "AWS ECS"],
+    "inferred_pain_points": [
+      "Data latency in streaming customer profiles to real-time marketing tools.",
+      "Friction in maintaining compliance with regional data residency laws."
+    ],
+    "fit_score": 67,
+    "score_breakdown": {
+      "size_fit": 22,
+      "tech_match": 18,
+      "hiring_velocity": 12,
+      "pain_keyword_match": 15
+    },
+    "fit_level": "Medium",
+    "score_reasoning": "Segment has a 67 fit score. As a large-scale division under a Public parent, they have solid size and stack match. However, business restructuring signals and low current hiring velocity (5 postings) indicate cautious procurement cycles.",
+    "red_flags": ["Corporate restructuring signals: potential procurement delays."],
+    "email_sequence": {
+      "touch_1": "Hi there,\n\nI saw that Segment integrated with AI models for real-time personalization. It's a great step toward predictive marketing! However, streaming customer profiles instantly can trigger data latency and compliance issues across regional endpoints. LeadForge helps enterprises route and audit data streams automatically, ensuring full compliance. I wanted to see if your product managers are exploring automated data-residency compliance checks?",
+      "touch_2": "Hi there,\n\nFollowing up on my last email. Segment is currently hiring a Security Compliance Specialist, indicating data governance is a top priority. LeadForge provides compliance-first routing protocols that keep sensitive data localized within specific AWS ECS containers. This helps teams satisfy strict data residency requirements without modifying their React or Go code. Would you be open to a 10-minute demo on Tuesday to see how we assist compliance teams?",
+      "touch_3": "Hi there, I understand things are busy with the business restructuring. I'll stop reaching out. If data residency compliance or stream latency ever becomes a challenge, feel free to contact me. Best!"
+    },
+    "status": "Scored"
+  }
+]
