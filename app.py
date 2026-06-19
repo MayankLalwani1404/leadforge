@@ -101,7 +101,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 try:
-    st.image("assets/leadforge_banner.jpeg", use_container_width=True)
+    st.image("assets/leadforge_banner.png", use_container_width=True)
 except Exception:
     pass
 
