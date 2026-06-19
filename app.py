@@ -101,7 +101,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 try:
-    st.image("assets/leadforge_banner.png", use_container_width=True)
+    st.image("assets/leadforge_banner.jpeg", use_container_width=True)
 except Exception:
     pass
 
@@ -380,7 +380,7 @@ else:
             breakdown = selected_lead["score_breakdown"]
             
             try:
-                st.image("assets/score_rubric.png", use_container_width=True)
+                st.image("assets/score_rubric.jpeg", use_container_width=True)
             except Exception:
                 pass
             
