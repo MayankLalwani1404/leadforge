@@ -29,6 +29,8 @@ leadforge/
 - View Details action trigger button connecting individual lead profiles to the detail panel.
 
 3. Company Deep-Dive
+- Replaces the main queue panel and sidebar filters entirely when a lead is selected to eliminate scrolling latency.
+- Actionable back buttons at the top of the deep-dive panel and in the sidebar allowing seamless return to the queue.
 - Context header referencing core company metadata including employee size, website link, location, and funding phase.
 - Intelligence report panel aggregating news headlines, tech stack listings, open hiring roles, inferred pain points, and red flags.
 - Score breakdown visualizer splitting progress values across Size Fit, Tech Match, Hiring Velocity, and Pain Keyword Match (each scaled 0-25).
@@ -62,6 +64,7 @@ Each record follows this JSON Schema structure:
 - status: string
 
 ## Key Design Decisions
+- Implemented a dynamic page router: If a company is selected, the application swaps screens to render the deep-dive view and displays a sidebar message; otherwise, it renders the filter panel and lead queue.
 - Handled state transitions by mapping select buttons to st.session_state.selected_company and calling st.rerun() to force-refresh panels.
 - Preserved email editing text states in a session dictionary (st.session_state.edited_emails) mapping edits back to the company so SDR customizations persist during sessions.
 - Injected custom CSS blocks overriding Streamlit styles to render premium card indicators with color-coded left borders matching target priority.

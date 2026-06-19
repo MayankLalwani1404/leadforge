@@ -111,142 +111,228 @@ def get_location_key(loc_str):
     else:
         return "Global"
 
-# =====================================================================
-# SCREEN 1 — Sidebar: ICP Configuration
-# =====================================================================
-st.sidebar.title("ICP Configuration")
-
-industry_options = ["B2B SaaS", "Fintech", "DevTools", "Data Infrastructure", "Sales Intelligence"]
-selected_industries = st.sidebar.multiselect(
-    "Target Industries",
-    options=industry_options,
-    key="industry_filter"
-)
-
-selected_size = st.sidebar.slider(
-    "Company Size (Employees)",
-    min_value=10,
-    max_value=5000,
-    value=st.session_state.size_filter,
-    step=10,
-    key="size_filter"
-)
-
-funding_options = ["Seed", "Series A", "Series B", "Series C", "Public"]
-selected_funding = st.sidebar.multiselect(
-    "Funding Stage",
-    options=funding_options,
-    key="funding_filter"
-)
-
-location_options = ["India", "USA", "Singapore", "Global"]
-selected_locations = st.sidebar.multiselect(
-    "Location",
-    options=location_options,
-    key="location_filter"
-)
-
-st.sidebar.button("Reset Filters", on_click=reset_filters, use_container_width=True)
-
-# Filter Logic
+# Filter Logic (computed globally so CSV export / counts are always correct)
 filtered_leads = []
 for lead in leads_data:
     # Industry check
-    if selected_industries and lead["industry"] not in selected_industries:
+    if st.session_state.industry_filter and lead["industry"] not in st.session_state.industry_filter:
         continue
     # Size check
-    if not (selected_size[0] <= lead["employee_count"] <= selected_size[1]):
+    if not (st.session_state.size_filter[0] <= lead["employee_count"] <= st.session_state.size_filter[1]):
         continue
     # Funding check
-    if selected_funding and lead["funding_stage"] not in selected_funding:
+    if st.session_state.funding_filter and lead["funding_stage"] not in st.session_state.funding_filter:
         continue
     # Location check
-    if selected_locations:
+    if st.session_state.location_filter:
         loc_key = get_location_key(lead["location"])
-        if loc_key not in selected_locations:
+        if loc_key not in st.session_state.location_filter:
             continue
     filtered_leads.append(lead)
-
-st.sidebar.markdown(f"**Showing {len(filtered_leads)} of 15 leads**")
 
 # Sort leads by fit score descending
 filtered_leads = sorted(filtered_leads, key=lambda x: x["fit_score"], reverse=True)
 
 # =====================================================================
-# SCREEN 2 — Main Panel: Lead Research Queue
+# SCREEN 1 — Sidebar: ICP Configuration (conditional contents)
 # =====================================================================
-st.title("LeadForge — Lead Research Queue")
+st.sidebar.title("ICP Configuration")
 
-# Subtitle showing active ICP filter summary
-industry_summary = ", ".join(selected_industries) if selected_industries else "All"
-funding_summary = ", ".join(selected_funding) if selected_funding else "All"
-loc_summary = ", ".join(selected_locations) if selected_locations else "All"
-st.markdown(
-    f"Active ICP: **Industry**: {industry_summary} | **Size**: {selected_size[0]}-{selected_size[1]} | **Funding**: {funding_summary} | **Location**: {loc_summary}"
-)
+if not st.session_state.selected_company:
+    industry_options = ["B2B SaaS", "Fintech", "DevTools", "Data Infrastructure", "Sales Intelligence"]
+    selected_industries = st.sidebar.multiselect(
+        "Target Industries",
+        options=industry_options,
+        key="industry_filter"
+    )
 
-# Metric row at top of main queue
-col_m1, col_m2, col_m3, col_m4, col_m5 = st.columns(5)
-total_shown = len(filtered_leads)
-avg_score = int(sum(l["fit_score"] for l in filtered_leads) / total_shown) if total_shown > 0 else 0
-high_count = sum(1 for l in filtered_leads if l["fit_level"] == "High")
-med_count = sum(1 for l in filtered_leads if l["fit_level"] == "Medium")
-low_count = sum(1 for l in filtered_leads if l["fit_level"] == "Low")
+    selected_size = st.sidebar.slider(
+        "Company Size (Employees)",
+        min_value=10,
+        max_value=5000,
+        value=st.session_state.size_filter,
+        step=10,
+        key="size_filter"
+    )
 
-col_m1.metric("Leads Shown", total_shown)
-col_m2.metric("Avg Fit Score", f"{avg_score}%")
-col_m3.metric("High Fit", high_count)
-col_m4.metric("Medium Fit", med_count)
-col_m5.metric("Low Fit", low_count)
+    funding_options = ["Seed", "Series A", "Series B", "Series C", "Public"]
+    selected_funding = st.sidebar.multiselect(
+        "Funding Stage",
+        options=funding_options,
+        key="funding_filter"
+    )
 
-st.write("---")
+    location_options = ["India", "USA", "Singapore", "Global"]
+    selected_locations = st.sidebar.multiselect(
+        "Location",
+        options=location_options,
+        key="location_filter"
+    )
 
-# Render cards in a scrollable container or simple grid
-for idx, lead in enumerate(filtered_leads):
-    level = lead["fit_level"].lower()
-    fit_color = "#28a745" if lead["fit_score"] >= 70 else ("#fd7e14" if lead["fit_score"] >= 40 else "#dc3545")
-    
-    # Grid column layout inside standard Streamlit to allow button interaction inside the styled panel
-    card_col1, card_col2 = st.columns([5, 1])
-    
-    with card_col1:
-        st.markdown(f"""
-        <div class="lead-card-container lead-card-{level}">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <span class="card-title">{lead['company_name']}</span>
-                <div>
-                    <span class="badge badge-industry">{lead['industry']}</span>
-                    <span class="badge badge-location">📍 {lead['location']}</span>
-                    <span class="badge badge-status">Status: {lead['status']}</span>
-                    <span class="badge badge-{level}">{lead['fit_level']} Fit</span>
-                </div>
-            </div>
-            <div><strong>Top Signal:</strong></div>
-            <div class="signal-text">📣 {lead['recent_news'][0]}</div>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with card_col2:
-        st.write("") # vertical spacing alignment
-        st.write("")
-        st.markdown(f"<div style='text-align: center; font-weight: bold; color: {fit_color}; font-size: 24px;'>{lead['fit_score']}%</div>", unsafe_allow_html=True)
-        st.progress(lead["fit_score"] / 100.0)
+    st.sidebar.button("Reset Filters", on_click=reset_filters, use_container_width=True)
+    st.sidebar.markdown(f"**Showing {len(filtered_leads)} of 15 leads**")
+else:
+    st.sidebar.markdown(f"Currently viewing details for **{st.session_state.selected_company}**.")
+    if st.sidebar.button("← Back to Lead Queue", key="sidebar_back", use_container_width=True):
+        st.session_state.selected_company = None
+        st.rerun()
+
+# =====================================================================
+# MAIN LAYOUT RENDERING
+# =====================================================================
+if not st.session_state.selected_company:
+    # =====================================================================
+    # SCREEN 2 — Main Panel: Lead Research Queue
+    # =====================================================================
+    st.title("LeadForge — Lead Research Queue")
+
+    # Subtitle showing active ICP filter summary
+    industry_summary = ", ".join(st.session_state.industry_filter) if st.session_state.industry_filter else "All"
+    funding_summary = ", ".join(st.session_state.funding_filter) if st.session_state.funding_filter else "All"
+    loc_summary = ", ".join(st.session_state.location_filter) if st.session_state.location_filter else "All"
+    st.markdown(
+        f"Active ICP: **Industry**: {industry_summary} | **Size**: {st.session_state.size_filter[0]}-{st.session_state.size_filter[1]} | **Funding**: {funding_summary} | **Location**: {loc_summary}"
+    )
+
+    # Metric row at top of main queue
+    col_m1, col_m2, col_m3, col_m4, col_m5 = st.columns(5)
+    total_shown = len(filtered_leads)
+    avg_score = int(sum(l["fit_score"] for l in filtered_leads) / total_shown) if total_shown > 0 else 0
+    high_count = sum(1 for l in filtered_leads if l["fit_level"] == "High")
+    med_count = sum(1 for l in filtered_leads if l["fit_level"] == "Medium")
+    low_count = sum(1 for l in filtered_leads if l["fit_level"] == "Low")
+
+    col_m1.metric("Leads Shown", total_shown)
+    col_m2.metric("Avg Fit Score", f"{avg_score}%")
+    col_m3.metric("High Fit", high_count)
+    col_m4.metric("Medium Fit", med_count)
+    col_m5.metric("Low Fit", low_count)
+
+    st.write("---")
+
+    # Render cards
+    for idx, lead in enumerate(filtered_leads):
+        level = lead["fit_level"].lower()
+        fit_color = "#28a745" if lead["fit_score"] >= 70 else ("#fd7e14" if lead["fit_score"] >= 40 else "#dc3545")
         
-        # Details button
-        if st.button("View Details →", key=f"details_{lead['company_name']}_{idx}", use_container_width=True):
-            st.session_state.selected_company = lead["company_name"]
-            st.rerun()
+        card_col1, card_col2 = st.columns([5, 1])
+        
+        with card_col1:
+            st.markdown(f"""
+            <div class="lead-card-container lead-card-{level}">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                    <span class="card-title">{lead['company_name']}</span>
+                    <div>
+                        <span class="badge badge-industry">{lead['industry']}</span>
+                        <span class="badge badge-location">📍 {lead['location']}</span>
+                        <span class="badge badge-status">Status: {lead['status']}</span>
+                        <span class="badge badge-{level}">{lead['fit_level']} Fit</span>
+                    </div>
+                </div>
+                <div><strong>Top Signal:</strong></div>
+                <div class="signal-text">📣 {lead['recent_news'][0]}</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with card_col2:
+            st.write("") # vertical spacing alignment
+            st.write("")
+            st.markdown(f"<div style='text-align: center; font-weight: bold; color: {fit_color}; font-size: 24px;'>{lead['fit_score']}%</div>", unsafe_allow_html=True)
+            st.progress(lead["fit_score"] / 100.0)
+            
+            # Details button
+            if st.button("View Details →", key=f"details_{lead['company_name']}_{idx}", use_container_width=True):
+                st.session_state.selected_company = lead["company_name"]
+                st.rerun()
 
-# =====================================================================
-# SCREEN 3 — Company Deep-Dive
-# =====================================================================
-if st.session_state.selected_company:
-    # Find selected lead
+    # =====================================================================
+    # SCREEN 4 — Analytics Footer (Rendered on Home Queue Page)
+    # =====================================================================
+    st.write("---")
+    st.subheader("Analytics Dashboard")
+
+    col_a1, col_a2, col_a3, col_a4 = st.columns(4)
+
+    total_leads = len(leads_data)
+    global_avg_score = int(sum(l["fit_score"] for l in leads_data) / total_leads)
+    global_high_fit = sum(1 for l in leads_data if l["fit_level"] == "High")
+    hours_saved = round(total_leads * 0.75)
+
+    col_a1.metric("Total Leads Researched", total_leads)
+    col_a2.metric("Avg Fit Score (All)", f"{global_avg_score}%")
+    col_a3.metric("High Fit Leads (All)", global_high_fit)
+    col_a4.metric("Est. Hours Saved", f"~{hours_saved} hrs")
+
+    # Prepare distribution bar chart
+    low_dist = sum(1 for l in filtered_leads if l["fit_score"] < 40)
+    med_dist = sum(1 for l in filtered_leads if 40 <= l["fit_score"] < 70)
+    high_dist = sum(1 for l in filtered_leads if l["fit_score"] >= 70)
+
+    dist_df = pd.DataFrame({
+        "Fit Level": ["Low (<40)", "Medium (40-69)", "High (>=70)"],
+        "Lead Count": [low_dist, med_dist, high_dist]
+    }).set_index("Fit Level")
+
+    st.write("#### Fit Score Distribution of Filtered Leads")
+    st.bar_chart(dist_df)
+
+    # CSV Export Button
+    export_rows = []
+    for lead in filtered_leads:
+        comp_name = lead["company_name"]
+        emails = st.session_state.edited_emails.get(comp_name, lead["email_sequence"])
+        
+        row = {
+            "Company Name": lead["company_name"],
+            "Website": lead["website"],
+            "Industry": lead["industry"],
+            "Employee Count": lead["employee_count"],
+            "Funding Stage": lead["funding_stage"],
+            "Location": lead["location"],
+            "Fit Score": lead["fit_score"],
+            "Fit Level": lead["fit_level"],
+            "Score Reasoning": lead["score_reasoning"],
+            "Recent News": "; ".join(lead["recent_news"]),
+            "Tech Stack": ", ".join(lead["tech_stack"]),
+            "Top Hiring Roles": ", ".join(lead["top_hiring_roles"]),
+            "Inferred Pain Points": "; ".join(lead["inferred_pain_points"]),
+            "Red Flags": "; ".join(lead["red_flags"]) if lead["red_flags"] else "None",
+            "Email Touch 1": emails["touch_1"],
+            "Email Touch 2": emails["touch_2"],
+            "Email Touch 3": emails["touch_3"],
+            "Status": lead["status"]
+        }
+        export_rows.append(row)
+
+    export_df = pd.DataFrame(export_rows)
+    csv_buffer = io.StringIO()
+    export_df.to_csv(csv_buffer, index=False)
+    csv_data = csv_buffer.getvalue()
+
+    st.download_button(
+        label="📥 Export Filtered Leads to CSV",
+        data=csv_data,
+        file_name="leadforge_export.csv",
+        mime="text/csv",
+        use_container_width=True
+    )
+
+else:
+    # =====================================================================
+    # SCREEN 3 — Company Deep-Dive (replaces main queue when selected)
+    # =====================================================================
     selected_lead = next((l for l in leads_data if l["company_name"] == st.session_state.selected_company), None)
     
     if selected_lead:
-        st.write("---")
-        st.header(f"🔍 Deep-Dive: {selected_lead['company_name']}")
+        # Title and Back Button row
+        back_col, title_col = st.columns([1, 5])
+        with back_col:
+            st.write("")  # vertical alignment
+            if st.button("← Back to Queue", key="main_back", use_container_width=True):
+                st.session_state.selected_company = None
+                st.rerun()
+        with title_col:
+            st.title(f"🔍 Deep-Dive: {selected_lead['company_name']}")
         
         # Header Info Row
         col_h1, col_h2, col_h3, col_h4 = st.columns(4)
@@ -304,7 +390,6 @@ if st.session_state.selected_company:
             
         st.markdown("### Generated Email Sequence")
         
-        # Setup email templates in session state if not already customized
         comp_name = selected_lead["company_name"]
         if comp_name not in st.session_state.edited_emails:
             st.session_state.edited_emails[comp_name] = {
@@ -327,76 +412,3 @@ if st.session_state.selected_company:
             
         st.success("Draft edits saved in-session.")
 
-# =====================================================================
-# SCREEN 4 — Analytics Footer
-# =====================================================================
-st.write("---")
-st.subheader("Analytics Dashboard")
-
-col_a1, col_a2, col_a3, col_a4 = st.columns(4)
-
-total_leads = len(leads_data)
-global_avg_score = int(sum(l["fit_score"] for l in leads_data) / total_leads)
-global_high_fit = sum(1 for l in leads_data if l["fit_level"] == "High")
-hours_saved = round(total_leads * 0.75)
-
-col_a1.metric("Total Leads Researched", total_leads)
-col_a2.metric("Avg Fit Score (All)", f"{global_avg_score}%")
-col_a3.metric("High Fit Leads (All)", global_high_fit)
-col_a4.metric("Est. Hours Saved", f"~{hours_saved} hrs")
-
-# Prepare distribution bar chart
-low_dist = sum(1 for l in filtered_leads if l["fit_score"] < 40)
-med_dist = sum(1 for l in filtered_leads if 40 <= l["fit_score"] < 70)
-high_dist = sum(1 for l in filtered_leads if l["fit_score"] >= 70)
-
-dist_df = pd.DataFrame({
-    "Fit Level": ["Low (<40)", "Medium (40-69)", "High (>=70)"],
-    "Lead Count": [low_dist, med_dist, high_dist]
-}).set_index("Fit Level")
-
-st.write("#### Fit Score Distribution of Filtered Leads")
-st.bar_chart(dist_df)
-
-# CSV Export Button
-# Prepare a clean DataFrame for CSV export including the current edited emails if available
-export_rows = []
-for lead in filtered_leads:
-    comp_name = lead["company_name"]
-    # Get edited emails if present, else fallback
-    emails = st.session_state.edited_emails.get(comp_name, lead["email_sequence"])
-    
-    row = {
-        "Company Name": lead["company_name"],
-        "Website": lead["website"],
-        "Industry": lead["industry"],
-        "Employee Count": lead["employee_count"],
-        "Funding Stage": lead["funding_stage"],
-        "Location": lead["location"],
-        "Fit Score": lead["fit_score"],
-        "Fit Level": lead["fit_level"],
-        "Score Reasoning": lead["score_reasoning"],
-        "Recent News": "; ".join(lead["recent_news"]),
-        "Tech Stack": ", ".join(lead["tech_stack"]),
-        "Top Hiring Roles": ", ".join(lead["top_hiring_roles"]),
-        "Inferred Pain Points": "; ".join(lead["inferred_pain_points"]),
-        "Red Flags": "; ".join(lead["red_flags"]) if lead["red_flags"] else "None",
-        "Email Touch 1": emails["touch_1"],
-        "Email Touch 2": emails["touch_2"],
-        "Email Touch 3": emails["touch_3"],
-        "Status": lead["status"]
-    }
-    export_rows.append(row)
-
-export_df = pd.DataFrame(export_rows)
-csv_buffer = io.StringIO()
-export_df.to_csv(csv_buffer, index=False)
-csv_data = csv_buffer.getvalue()
-
-st.download_button(
-    label="📥 Export Filtered Leads to CSV",
-    data=csv_data,
-    file_name="leadforge_export.csv",
-    mime="text/csv",
-    use_container_width=True
-)
