@@ -100,6 +100,11 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+try:
+    st.image("assets/leadforge_banner.png", use_container_width=True)
+except Exception:
+    pass
+
 # Helper function to get location match key
 def get_location_key(loc_str):
     if "India" in loc_str:
@@ -373,6 +378,11 @@ else:
             st.subheader("Fit Score Breakdown")
             
             breakdown = selected_lead["score_breakdown"]
+            
+            try:
+                st.image("assets/score_rubric.png", use_container_width=True)
+            except Exception:
+                pass
             
             st.write(f"Size Fit: **{breakdown['size_fit']}/25**")
             st.progress(breakdown["size_fit"] / 25.0)
